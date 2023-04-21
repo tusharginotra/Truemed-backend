@@ -1,5 +1,5 @@
-var productList = artifacts.require('ProductList')
+var medicineList = artifacts.require('MedicineList')
 
 module.exports = function(deployer){
-    deployer.deploy(productList)
+    deployer.deploy(medicineList)
 }

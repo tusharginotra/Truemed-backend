@@ -25,7 +25,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -38,7 +39,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getType\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"userType\",\"type\":\"string\"}],\"name\":\"login\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"verifyUser\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/UserList.sol\":\"UserList\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/UserList.sol\":{\"keccak256\":\"0x6f41111f0438cb550f92beb5260ba2163ae1351e68594e4303b3e110c8329c04\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://478f59de2eefa64bd49e4d0f0812b405e810164b8c5bc43ed7e6d4edf92be89c\",\"dweb:/ipfs/QmSB18j5FXSX1SdUd9aQtTPUKgBt7HrLqUwTeSGA1LN8mN\"]}},\"version\":1}",
@@ -4445,9 +4447,17 @@
     "name": "solc",
     "version": "0.8.19+commit.7dd6d404.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x73a34C9FEFe78fa5a48c7Ef49D4303E79AD77774",
+      "transactionHash": "0x8f0049ee7eed10d8020faf4722a41df16d4e48f4cff7dff5d590bac1158325af"
+    }
+  },
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-04-22T08:34:24.399Z",
+  "updatedAt": "2023-04-23T07:39:48.322Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

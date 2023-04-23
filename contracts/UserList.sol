@@ -15,6 +15,10 @@ contract UserList{
         return listOfUsers[msg.sender].userType;
     }
 
+    function getUserType(address userAddress) public view returns(string memory){
+        return listOfUsers[userAddress].userType;
+    }
+
     function verifyUser() public view returns(bool){
         if(listOfUsers[msg.sender].userAddress == address(0)) return false;
         return true;

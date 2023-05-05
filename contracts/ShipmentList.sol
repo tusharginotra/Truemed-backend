@@ -49,11 +49,11 @@ contract ShipmentList{
     function setVerified(uint chainId, uint shipmentId) public{
         listOfShipments[chainId][shipmentId].transactionStatus = true;
     }
-    function getVerificationResult(uint chainId, uint shipmentId) public view returns(bool){
+    function getVerificationResult(uint chainId, uint shipmentId, address account) public view returns(bool){
         if(listOfShipments[chainId][shipmentId].transactionStatus==true){
             return false;
         }else{
-            if(listOfShipments[chainId][shipmentId].recieverId==msg.sender || listOfShipments[chainId][shipmentId].recieverId==address(0)){
+            if(listOfShipments[chainId][shipmentId].recieverId==account || listOfShipments[chainId][shipmentId].recieverId==address(0)){
                 return true;
             }else{
                 return false;

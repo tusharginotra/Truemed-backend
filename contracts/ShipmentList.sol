@@ -49,15 +49,22 @@ contract ShipmentList{
     function setVerified(uint chainId, uint shipmentId) public{
         listOfShipments[chainId][shipmentId].transactionStatus = true;
     }
-    function getVerificationResult(uint chainId, uint shipmentId, address account) public view returns(bool){
+    // 0 for original unverified product
+    // 1 for shipment does not exist
+    // 2 for already verified product
+    // 3 for authentication error
+    function getVerificationResult(uint chainId, uint shipmentId, address account) public view returns(uint){
+        if(listOfShipments[chainId][shipmentId].recieverId!=account && listOfShipments[chainId][shipmentId].recieverId!=address(0)){
+            return 3;
+        }
         if(listOfShipments[chainId][shipmentId].transactionStatus==true){
-            return false;
-        }else{
-            if(listOfShipments[chainId][shipmentId].recieverId==account || listOfShipments[chainId][shipmentId].recieverId==address(0)){
-                return true;
-            }else{
-                return false;
-            }
+            return 2;
+        }
+        if(listOfShipments[chainId][shipmentId].senderId==address(0)){
+            return 1;
+        }
+        else{
+           return 0;
         }
     }
     function allowOpenSelling(uint chainId, uint shipmentId) public {
